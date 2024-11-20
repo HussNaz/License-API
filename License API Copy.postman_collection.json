@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "8e99222e-fcb9-4254-b305-f32019d98974",
+		"name": "License API Copy",
+		"description": "This API is for License Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24827832",
+		"_collection_link": "https://nazmul16.postman.co/workspace/New-Team-Workspace~f35f1b95-7ada-49e0-aab5-32ac6c8cef37/collection/24827832-8e99222e-fcb9-4254-b305-f32019d98974?action=share&source=collection_link&creator=24827832"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "deactivate",
+					"item": [
+						{
+							"name": "{licenseCode}",
+							"item": [
+								{
+									"name": "deactivate License",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/deactivate/:licenseCode",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"deactivate",
+												":licenseCode"
+											],
+											"variable": [
+												{
+													"key": "licenseCode",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/deactivate/:licenseCode",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"deactivate",
+														":licenseCode"
+													],
+													"variable": [
+														{
+															"key": "licenseCode"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"dolor_5\": \"<string>\",\n  \"laboris_465\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "activate",
+					"item": [
+						{
+							"name": "{licenseCode}",
+							"item": [
+								{
+									"name": "activate License",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/activate/:licenseCode",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"activate",
+												":licenseCode"
+											],
+											"variable": [
+												{
+													"key": "licenseCode",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/activate/:licenseCode",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"activate",
+														":licenseCode"
+													],
+													"variable": [
+														{
+															"key": "licenseCode"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"dolor_5\": \"<string>\",\n  \"laboris_465\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "create License",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"binNumber\": \"8592165652553\",\n  \"expirationDate\": \"<dateTime>\",\n  \"licenseName\": \"<string>\",\n  \"nid\": \"8537087920\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/create"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"binNumber\": \"8592165652553\",\n  \"expirationDate\": \"<dateTime>\",\n  \"licenseName\": \"<string>\",\n  \"nid\": \"8537087920\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/create"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"binNumber\": \"8592165652553\",\n  \"expirationDate\": \"<dateTime>\",\n  \"licenseName\": \"<string>\",\n  \"nid\": \"8537087920\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "validate",
+					"item": [
+						{
+							"name": "{licenseCode}",
+							"item": [
+								{
+									"name": "validate License",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/validate/:licenseCode?binNumber=<string>&nid=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"validate",
+												":licenseCode"
+											],
+											"query": [
+												{
+													"key": "binNumber",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "nid",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											],
+											"variable": [
+												{
+													"key": "licenseCode",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/validate/:licenseCode?binNumber=<string>&nid=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"validate",
+														":licenseCode"
+													],
+													"query": [
+														{
+															"key": "binNumber",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "nid",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													],
+													"variable": [
+														{
+															"key": "licenseCode"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"dolor_5\": \"<string>\",\n  \"laboris_465\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getLicenseById",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get License By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/getLicenseById/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"getLicenseById",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/getLicenseById/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"getLicenseById",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"binNumber\": \"8592165652553\",\n  \"expirationDate\": \"<dateTime>\",\n  \"licenseName\": \"<string>\",\n  \"nid\": \"8537087920\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getByLicenseCode",
+					"item": [
+						{
+							"name": "{licenseCode}",
+							"item": [
+								{
+									"name": "get License By Code",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/getByLicenseCode/:licenseCode",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"getByLicenseCode",
+												":licenseCode"
+											],
+											"variable": [
+												{
+													"key": "licenseCode",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/getByLicenseCode/:licenseCode",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"getByLicenseCode",
+														":licenseCode"
+													],
+													"variable": [
+														{
+															"key": "licenseCode"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"binNumber\": \"8592165652553\",\n  \"expirationDate\": \"<dateTime>\",\n  \"licenseName\": \"<string>\",\n  \"nid\": \"8537087920\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getAllLicenses",
+					"item": [
+						{
+							"name": "get All Licenses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/api/getAllLicenses"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": "{{baseUrl}}/api/getAllLicenses"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"binNumber\": \"4693657755208\",\n    \"expirationDate\": \"<dateTime>\",\n    \"licenseName\": \"<string>\",\n    \"nid\": \"4322479149143\"\n  },\n  {\n    \"binNumber\": \"5747805558373\",\n    \"expirationDate\": \"<dateTime>\",\n    \"licenseName\": \"<string>\",\n    \"nid\": \"8558054109512\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"username": "{{basicAuthUsername}}",
+			"password": "{{basicAuthPassword}}"
+		}
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
