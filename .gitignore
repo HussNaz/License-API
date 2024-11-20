@@ -38,3 +38,8 @@ out/
 .idea/
 .gradle/
 gradle
+settings.gradle
+gradlew.bat
+.gitignore
+.gitattributes
+build.gradle~
