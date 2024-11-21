@@ -57,7 +57,7 @@ public class LicenseController {
         return ResponseEntity.ok(licenses);
     }
 
-    @GetMapping("/validate/{licenseCode}")
+    @GetMapping("/validateByNidAndBin/{licenseCode}")
     public ResponseEntity<Map<String, String>> validateLicense(
             @PathVariable String licenseCode,
             @RequestParam String binNumber,
@@ -69,5 +69,17 @@ public class LicenseController {
         response.put("message", "License with code " + licenseCode + " is valid.");
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/validateByBinAndLicenseCode/{licenseCode}")
+    public ResponseEntity<Map<String, String>> validateLicenseByBinAndLicenseCode(
+            @PathVariable String licenseCode,
+            @RequestParam String binNumber) {
+                boolean isValid= licenseService.validateLicenseByBinAndLicenseCode(licenseCode, binNumber);
+                Map<String, String> response = new HashMap<>();
+                response.put("isValid", String.valueOf(isValid));
+                response.put("message", "License with code " + licenseCode + " is valid.");
+                return ResponseEntity.ok(response);
+            }
+
 }
 

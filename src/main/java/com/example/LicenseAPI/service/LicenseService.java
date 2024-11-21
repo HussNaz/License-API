@@ -72,11 +72,37 @@ public class LicenseService {
     }
 
 
+    public boolean validateLicenseByBinAndLicenseCode(String licenseCode, String binNumber) {
+        if (!isValidLicenseCode(licenseCode)) {
+            throw new InvalidLicenseCodeException("Invalid license code.License code must be 4 digits long.");
+        }
+        License license = licenseRepository.findByLicenseCode(licenseCode)
+                .orElseThrow(() -> new LicenseNotFoundException("License with code " + licenseCode + " not found."));
+
+        if (!license.getBinNumber().equals(binNumber)) {
+            throw new InvalidBINException("Invalid binNumber for the provided licenseCode.");
+        }
+
+        if (!license.getIsActive()) {
+            throw new LicenseInactiveException("License with code " + licenseCode + " is not active.");
+        }
+
+        if (license.getIsOneTimeUse()) {
+            throw new LicenseAlreadyUsedException("License with code " + licenseCode + " is already one time used.");
+        }
+
+        if (license.getExpirationDate().isBefore(LocalDateTime.now())) {
+            throw new LicenseExpiredException("License with code " + licenseCode + " has expired.");
+        }
+
+        return true;
+
+    }
 
     public boolean validateLicense(String licenseCode, String binNumber, String nid) {
 
         if (!isValidLicenseCode(licenseCode)) {
-            throw new InvalidLicenseCodeException("Invalid license code.");
+            throw new InvalidLicenseCodeException("Invalid license code.License code must be 4 digits long.");
         }
 
         if (!validateBinAndNid(binNumber, nid)) {
